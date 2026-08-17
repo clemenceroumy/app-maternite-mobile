@@ -20,13 +20,26 @@ Implement client features :
 - Supabase
 - Intl
 
+## TODO
 
-### Resources
+- [ ] Create Theme
+- [ ] Init router
+- [ ] Init i18n
+- [ ] Setup DI
+- [ ] Implement auth feature (page, bloc, usecase, repository, data source)
+- [ ] Init graphql client and queries
+- [ ] Implement search feature
+- [ ] App config (variants)
+- [ ] Write tests
 
-#### Doc
+
+## Resources
+Resources used to help building this project
+
+### Doc
 - https://docs.flutter.dev/app-architecture/case-study
 - https://engineering.verygood.ventures/architecture/architecture/#project-organization
 
-#### Projects
+### Projects
 - https://github.com/flutter/samples/tree/main/compass_app
 - https://github.com/GCamanes/manga-tek-flutter/tree/develop
