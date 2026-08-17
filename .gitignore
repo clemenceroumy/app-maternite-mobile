@@ -10,7 +10,8 @@
 .buildlog/
 .history
 
-
+# FVM Version Cache
+.fvm/
 
 # Flutter repo-specific
 /bin/cache/
