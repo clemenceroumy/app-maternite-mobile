@@ -397,7 +397,7 @@
         <entry key="hooks">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/hooks-2.1.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/hooks-2.2.0/lib" />
             </list>
           </value>
         </entry>
@@ -719,7 +719,7 @@
         <entry key="record_use">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/record_use-1.1.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/record_use-1.1.1/lib" />
             </list>
           </value>
         </entry>
@@ -974,7 +974,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/graphql_codegen-3.0.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/graphs-2.3.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/hive_ce-2.19.3/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/hooks-2.1.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/hooks-2.2.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/http-1.6.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/http_multi_server-3.2.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/http_parser-4.1.2/lib" />
@@ -1020,7 +1020,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/pubspec_parse-1.5.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/realtime_client-2.13.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/recase-4.1.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/record_use-1.1.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/record_use-1.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/rxdart-0.28.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shelf-1.4.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shelf_web_socket-3.0.0/lib" />

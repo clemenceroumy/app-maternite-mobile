@@ -9,12 +9,36 @@ class Homepage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(AppLocalizations.of(context)!.helloWorld),
+            Text(
+              AppLocalizations.of(context)!.helloWorld,
+              style: Theme.of(context).textTheme.displayLarge,
+            ),
+            Text(
+              AppLocalizations.of(context)!.helloWorld,
+              style: Theme.of(context).textTheme.displayMedium,
+            ),
+            Text(
+              AppLocalizations.of(context)!.helloWorld,
+              style: Theme.of(context).textTheme.displaySmall,
+            ),
+            Text(
+              AppLocalizations.of(context)!.helloWorld,
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            Text(
+              AppLocalizations.of(context)!.helloWorld,
+              style: Theme.of(context).textTheme.headlineSmall,
+            ),
             Text(
               AppLocalizations.of(context)!.helloWorld,
               style: Theme.of(context).textTheme.bodyMedium!
                   .copyWith(color: Theme.of(context).colorScheme.primary),
+            ),
+            Text(
+              AppLocalizations.of(context)!.helloWorld,
+              style: Theme.of(context).textTheme.bodySmall,
             ),
           ],
         ),
