@@ -10,7 +10,12 @@ class Homepage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            Text(AppLocalizations.of(context)!.helloWorld)
+            Text(AppLocalizations.of(context)!.helloWorld),
+            Text(
+              AppLocalizations.of(context)!.helloWorld,
+              style: Theme.of(context).textTheme.bodyMedium!
+                  .copyWith(color: Theme.of(context).colorScheme.primary),
+            ),
           ],
         ),
       ),
