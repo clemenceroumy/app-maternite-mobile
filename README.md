@@ -22,8 +22,8 @@ Implement client features :
 
 ## TODO
 
-- [ ] Create Theme
-- [ ] Init router
+- [x] Create Theme
+- [x] Init router
 - [x] Init i18n
 - [ ] Setup DI
 - [ ] Implement auth feature (page, bloc, usecase, repository, data source)

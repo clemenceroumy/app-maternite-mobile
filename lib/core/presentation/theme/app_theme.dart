@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'app_colors.dart';
 
 class AppTheme {
-  static final theme = ThemeData(
+  static ThemeData theme(Brightness contrast) => ThemeData(
     textTheme: AppTypography.textTheme,
-    colorScheme: AppColors.colors
+    colorScheme: contrast == Brightness.light ? AppColors.lightColors : AppColors.darkColors
   );
 }

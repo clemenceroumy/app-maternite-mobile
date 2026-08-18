@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppColors {
+abstract class AppColors {
   static const primary = Color(0xFF4F583B);
   static const secondary = Color(0xFFF4B840);
   static const secondaryDisabled = Color(0xFFe7dfcd);
@@ -14,7 +14,24 @@ class AppColors {
   static const onSurface = Color(0xFF171a0b);
   static const onBackground = Color(0xFF171a0b);
 
-  static ColorScheme colors = ColorScheme(
+  static const darkBackground = Color(0xFF2A261F);
+
+  static ColorScheme lightColors = ColorScheme(
+    primary: primary,
+    secondary: secondary,
+    tertiary: tertiary,
+    onPrimary: onPrimary,
+    onSecondary: onSecondary,
+    onTertiary: onTertiary,
+    error: tertiary,
+    onError: onTertiary,
+    surface: background,
+    surfaceContainer: surface,
+    onSurface: onBackground,
+    brightness: Brightness.light,
+  );
+
+  static ColorScheme darkColors = ColorScheme(
     primary: primary,
     secondary: secondary,
     tertiary: tertiary,
