@@ -149,10 +149,10 @@
             </list>
           </value>
         </entry>
-        <entry key="cupertino_icons">
+        <entry key="cupertino_ui">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.9/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/cupertino_ui-1.0.0/lib" />
             </list>
           </value>
         </entry>
@@ -237,6 +237,13 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_lints-6.0.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_localizations">
+          <value>
+            <list>
+              <option value="$USER_HOME$/Developer/flutter/packages/flutter_localizations/lib" />
             </list>
           </value>
         </entry>
@@ -517,6 +524,13 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/material_color_utilities-0.13.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="material_ui">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/material_ui-1.0.0/lib" />
             </list>
           </value>
         </entry>
@@ -929,7 +943,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/collection-1.19.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/convert-3.1.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/crypto-3.0.7/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.9/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/cupertino_ui-1.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dart_earcut-1.2.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dart_jsonwebtoken-3.4.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dart_polylabel2-1.0.0/lib" />
@@ -979,6 +993,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/logging-1.3.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/matcher-0.12.20/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/material_color_utilities-0.13.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/material_ui-1.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/meta-1.19.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/mgrs_dart-3.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/mime-2.0.0/lib" />
@@ -1035,6 +1050,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/yet_another_json_isolate-2.1.1/lib" />
       <root url="file://$USER_HOME$/Developer/flutter/bin/cache/pkg/sky_engine/lib" />
       <root url="file://$USER_HOME$/Developer/flutter/packages/flutter/lib" />
+      <root url="file://$USER_HOME$/Developer/flutter/packages/flutter_localizations/lib" />
       <root url="file://$USER_HOME$/Developer/flutter/packages/flutter_test/lib" />
       <root url="file://$USER_HOME$/Developer/flutter/packages/flutter_web_plugins/lib" />
     </CLASSES>

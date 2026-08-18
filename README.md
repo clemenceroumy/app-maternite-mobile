@@ -24,7 +24,7 @@ Implement client features :
 
 - [ ] Create Theme
 - [ ] Init router
-- [ ] Init i18n
+- [x] Init i18n
 - [ ] Setup DI
 - [ ] Implement auth feature (page, bloc, usecase, repository, data source)
 - [ ] Init graphql client and queries
