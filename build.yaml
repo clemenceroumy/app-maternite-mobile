@@ -1,0 +1,24 @@
+targets:
+  $default:
+    builders:
+      graphql_codegen:
+        options:
+          clients:
+            - graphql
+          scalars:
+            JSON:
+              type: String
+            Time:
+              type: String
+            Date:
+              type: String
+            Datetime:
+              type: DateTime
+            Opaque:
+              type: String
+            UUID:
+              type: String
+            BigFloat:
+              type: double
+            BigInt:
+              type: int

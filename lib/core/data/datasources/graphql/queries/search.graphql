@@ -1,0 +1,59 @@
+query SearchByProfessional($search: String) {
+    professionalCollection(filter: {or: [
+        { first_name: { ilike: $search } },
+        { last_name: { ilike: $search } }
+    ]}) {
+        edges {
+            node {
+                id
+                first_name
+                last_name
+                description
+                city
+            }
+        }
+    }
+}
+
+query SearchByServices($search: String) {
+    servicesCollection(filter: {name: {ilike: $search}}) {
+        edges {
+            node {
+                id
+                name
+            }
+        }
+    }
+}
+
+query SearchByCategories($search: String) {
+    categoriesCollection(filter: {name: {ilike: $search}}) {
+        edges {
+            node {
+                id
+                name
+            }
+        }
+    }
+}
+
+query SearchByNeeds($search: String) {
+    needsCollection(filter: {name: {ilike: $search}}) {
+        edges {
+            node {
+                id
+                name
+            }
+        }
+    }
+}
+
+query GetProfessionalsBySearch($serviceId: UUID, $needId: UUID, $categoryId: UUID, $lat: Float, $long: Float) {
+    search_professionals(p_service_id: $serviceId, p_need_id: $needId, p_category_id: $categoryId, p_lat: $lat, p_long: $long, p_radius: 20) {
+        edges {
+            node {
+                ...ProfessionalWithServices
+            }
+        }
+    }
+}

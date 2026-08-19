@@ -41,8 +41,9 @@ dependencies:
   supabase: ^2.16.1
   graphql: ^5.2.4
   provider: ^6.1.5+1
-
   material_ui: any
+  injectable: ^3.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

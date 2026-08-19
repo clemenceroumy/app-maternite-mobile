@@ -1,0 +1,3319 @@
+"""A high precision floating point value represented as a string"""
+scalar BigFloat
+
+"""
+Boolean expression comparing fields on type "BigFloat"
+"""
+input BigFloatFilter {
+  eq: BigFloat
+  gt: BigFloat
+  gte: BigFloat
+  in: [BigFloat!]
+  is: FilterIs
+  lt: BigFloat
+  lte: BigFloat
+  neq: BigFloat
+}
+
+"""
+Boolean expression comparing fields on type "BigFloatList"
+"""
+input BigFloatListFilter {
+  containedBy: [BigFloat!]
+  contains: [BigFloat!]
+  eq: [BigFloat!]
+  is: FilterIs
+  overlaps: [BigFloat!]
+}
+
+"""An arbitrary size integer represented as a string"""
+scalar BigInt
+
+"""
+Boolean expression comparing fields on type "BigInt"
+"""
+input BigIntFilter {
+  eq: BigInt
+  gt: BigInt
+  gte: BigInt
+  in: [BigInt!]
+  is: FilterIs
+  lt: BigInt
+  lte: BigInt
+  neq: BigInt
+}
+
+"""
+Boolean expression comparing fields on type "BigIntList"
+"""
+input BigIntListFilter {
+  containedBy: [BigInt!]
+  contains: [BigInt!]
+  eq: [BigInt!]
+  is: FilterIs
+  overlaps: [BigInt!]
+}
+
+"""
+Boolean expression comparing fields on type "Boolean"
+"""
+input BooleanFilter {
+  eq: Boolean
+  is: FilterIs
+}
+
+"""
+Boolean expression comparing fields on type "BooleanList"
+"""
+input BooleanListFilter {
+  containedBy: [Boolean!]
+  contains: [Boolean!]
+  eq: [Boolean!]
+  is: FilterIs
+  overlaps: [Boolean!]
+}
+
+"""
+An opaque string using for tracking a position in results during pagination
+"""
+scalar Cursor
+
+"""A date without time information"""
+scalar Date
+
+"""
+Boolean expression comparing fields on type "Date"
+"""
+input DateFilter {
+  eq: Date
+  gt: Date
+  gte: Date
+  in: [Date!]
+  is: FilterIs
+  lt: Date
+  lte: Date
+  neq: Date
+}
+
+"""
+Boolean expression comparing fields on type "DateList"
+"""
+input DateListFilter {
+  containedBy: [Date!]
+  contains: [Date!]
+  eq: [Date!]
+  is: FilterIs
+  overlaps: [Date!]
+}
+
+"""A date and time"""
+scalar Datetime
+
+"""
+Boolean expression comparing fields on type "Datetime"
+"""
+input DatetimeFilter {
+  eq: Datetime
+  gt: Datetime
+  gte: Datetime
+  in: [Datetime!]
+  is: FilterIs
+  lt: Datetime
+  lte: Datetime
+  neq: Datetime
+}
+
+"""
+Boolean expression comparing fields on type "DatetimeList"
+"""
+input DatetimeListFilter {
+  containedBy: [Datetime!]
+  contains: [Datetime!]
+  eq: [Datetime!]
+  is: FilterIs
+  overlaps: [Datetime!]
+}
+
+enum FilterIs {
+  NULL
+  NOT_NULL
+}
+
+"""
+Boolean expression comparing fields on type "Float"
+"""
+input FloatFilter {
+  eq: Float
+  gt: Float
+  gte: Float
+  in: [Float!]
+  is: FilterIs
+  lt: Float
+  lte: Float
+  neq: Float
+}
+
+"""
+Boolean expression comparing fields on type "FloatList"
+"""
+input FloatListFilter {
+  containedBy: [Float!]
+  contains: [Float!]
+  eq: [Float!]
+  is: FilterIs
+  overlaps: [Float!]
+}
+
+"""
+Boolean expression comparing fields on type "ID"
+"""
+input IDFilter {
+  eq: ID
+}
+
+"""
+Boolean expression comparing fields on type "Int"
+"""
+input IntFilter {
+  eq: Int
+  gt: Int
+  gte: Int
+  in: [Int!]
+  is: FilterIs
+  lt: Int
+  lte: Int
+  neq: Int
+}
+
+"""
+Boolean expression comparing fields on type "IntList"
+"""
+input IntListFilter {
+  containedBy: [Int!]
+  contains: [Int!]
+  eq: [Int!]
+  is: FilterIs
+  overlaps: [Int!]
+}
+
+"""A Javascript Object Notation value serialized as a string"""
+scalar JSON
+
+"""The root type for creating and mutating data"""
+type Mutation {
+  """Deletes zero or more records from the `agenda_availability` collection"""
+  deleteFromagenda_availabilityCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: agenda_availabilityFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): agenda_availabilityDeleteResponse!
+
+  """Deletes zero or more records from the `agenda_template` collection"""
+  deleteFromagenda_templateCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: agenda_templateFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): agenda_templateDeleteResponse!
+
+  """Deletes zero or more records from the `appointments` collection"""
+  deleteFromappointmentsCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: appointmentsFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): appointmentsDeleteResponse!
+
+  """Deletes zero or more records from the `categories` collection"""
+  deleteFromcategoriesCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: categoriesFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): categoriesDeleteResponse!
+
+  """Deletes zero or more records from the `categories_services` collection"""
+  deleteFromcategories_servicesCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: categories_servicesFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): categories_servicesDeleteResponse!
+
+  """Deletes zero or more records from the `children` collection"""
+  deleteFromchildrenCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: childrenFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): childrenDeleteResponse!
+
+  """Deletes zero or more records from the `needs` collection"""
+  deleteFromneedsCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: needsFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): needsDeleteResponse!
+
+  """Deletes zero or more records from the `needs_services` collection"""
+  deleteFromneeds_servicesCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: needs_servicesFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): needs_servicesDeleteResponse!
+
+  """Deletes zero or more records from the `parents_children` collection"""
+  deleteFromparents_childrenCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: parents_childrenFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): parents_childrenDeleteResponse!
+
+  """Deletes zero or more records from the `professional` collection"""
+  deleteFromprofessionalCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: professionalFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): professionalDeleteResponse!
+
+  """
+  Deletes zero or more records from the `professionals_by_need` collection
+  """
+  deleteFromprofessionals_by_needCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: professionals_by_needFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): professionals_by_needDeleteResponse!
+
+  """
+  Deletes zero or more records from the `professionals_services` collection
+  """
+  deleteFromprofessionals_servicesCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: professionals_servicesFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): professionals_servicesDeleteResponse!
+
+  """
+  Deletes zero or more records from the `reserved_appointments` collection
+  """
+  deleteFromreserved_appointmentsCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: reserved_appointmentsFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): reserved_appointmentsDeleteResponse!
+
+  """Deletes zero or more records from the `services` collection"""
+  deleteFromservicesCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: servicesFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): servicesDeleteResponse!
+
+  """Deletes zero or more records from the `templates` collection"""
+  deleteFromtemplatesCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: templatesFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): templatesDeleteResponse!
+
+  """Deletes zero or more records from the `users` collection"""
+  deleteFromusersCollection(
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: usersFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): usersDeleteResponse!
+  disablelongtransactions: String
+  enablelongtransactions: String
+  gettransactionid: Opaque
+
+  """Adds one or more `agenda_availability` records to the collection"""
+  insertIntoagenda_availabilityCollection(objects: [agenda_availabilityInsertInput!]!): agenda_availabilityInsertResponse
+
+  """Adds one or more `agenda_template` records to the collection"""
+  insertIntoagenda_templateCollection(objects: [agenda_templateInsertInput!]!): agenda_templateInsertResponse
+
+  """Adds one or more `appointments` records to the collection"""
+  insertIntoappointmentsCollection(objects: [appointmentsInsertInput!]!): appointmentsInsertResponse
+
+  """Adds one or more `categories` records to the collection"""
+  insertIntocategoriesCollection(objects: [categoriesInsertInput!]!): categoriesInsertResponse
+
+  """Adds one or more `categories_services` records to the collection"""
+  insertIntocategories_servicesCollection(objects: [categories_servicesInsertInput!]!): categories_servicesInsertResponse
+
+  """Adds one or more `children` records to the collection"""
+  insertIntochildrenCollection(objects: [childrenInsertInput!]!): childrenInsertResponse
+
+  """Adds one or more `needs` records to the collection"""
+  insertIntoneedsCollection(objects: [needsInsertInput!]!): needsInsertResponse
+
+  """Adds one or more `needs_services` records to the collection"""
+  insertIntoneeds_servicesCollection(objects: [needs_servicesInsertInput!]!): needs_servicesInsertResponse
+
+  """Adds one or more `parents_children` records to the collection"""
+  insertIntoparents_childrenCollection(objects: [parents_childrenInsertInput!]!): parents_childrenInsertResponse
+
+  """Adds one or more `professional` records to the collection"""
+  insertIntoprofessionalCollection(objects: [professionalInsertInput!]!): professionalInsertResponse
+
+  """Adds one or more `professionals_by_need` records to the collection"""
+  insertIntoprofessionals_by_needCollection(objects: [professionals_by_needInsertInput!]!): professionals_by_needInsertResponse
+
+  """Adds one or more `professionals_services` records to the collection"""
+  insertIntoprofessionals_servicesCollection(objects: [professionals_servicesInsertInput!]!): professionals_servicesInsertResponse
+
+  """Adds one or more `reserved_appointments` records to the collection"""
+  insertIntoreserved_appointmentsCollection(objects: [reserved_appointmentsInsertInput!]!): reserved_appointmentsInsertResponse
+
+  """Adds one or more `services` records to the collection"""
+  insertIntoservicesCollection(objects: [servicesInsertInput!]!): servicesInsertResponse
+
+  """Adds one or more `templates` records to the collection"""
+  insertIntotemplatesCollection(objects: [templatesInsertInput!]!): templatesInsertResponse
+
+  """Adds one or more `users` records to the collection"""
+  insertIntousersCollection(objects: [usersInsertInput!]!): usersInsertResponse
+  longtransactionsenabled: Boolean
+  postgis_extensions_upgrade: String
+  postgis_selectivity(tbl: Opaque!, att_name: String!, geom: Opaque!, mode: String = "2"): Float
+  st_clusterkmeans(geom: Opaque!, k: Int!, max_radius: Float): Int
+  st_symmetricdifference(geom1: Opaque!, geom2: Opaque!): Opaque
+
+  """Updates zero or more records in the `agenda_availability` collection"""
+  updateagenda_availabilityCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: agenda_availabilityUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: agenda_availabilityFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): agenda_availabilityUpdateResponse!
+
+  """Updates zero or more records in the `agenda_template` collection"""
+  updateagenda_templateCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: agenda_templateUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: agenda_templateFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): agenda_templateUpdateResponse!
+
+  """Updates zero or more records in the `appointments` collection"""
+  updateappointmentsCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: appointmentsUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: appointmentsFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): appointmentsUpdateResponse!
+
+  """Updates zero or more records in the `categories` collection"""
+  updatecategoriesCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: categoriesUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: categoriesFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): categoriesUpdateResponse!
+
+  """Updates zero or more records in the `categories_services` collection"""
+  updatecategories_servicesCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: categories_servicesUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: categories_servicesFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): categories_servicesUpdateResponse!
+
+  """Updates zero or more records in the `children` collection"""
+  updatechildrenCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: childrenUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: childrenFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): childrenUpdateResponse!
+
+  """Updates zero or more records in the `needs` collection"""
+  updateneedsCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: needsUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: needsFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): needsUpdateResponse!
+
+  """Updates zero or more records in the `needs_services` collection"""
+  updateneeds_servicesCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: needs_servicesUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: needs_servicesFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): needs_servicesUpdateResponse!
+
+  """Updates zero or more records in the `parents_children` collection"""
+  updateparents_childrenCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: parents_childrenUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: parents_childrenFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): parents_childrenUpdateResponse!
+
+  """Updates zero or more records in the `professional` collection"""
+  updateprofessionalCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: professionalUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: professionalFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): professionalUpdateResponse!
+
+  """Updates zero or more records in the `professionals_by_need` collection"""
+  updateprofessionals_by_needCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: professionals_by_needUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: professionals_by_needFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): professionals_by_needUpdateResponse!
+
+  """
+  Updates zero or more records in the `professionals_services` collection
+  """
+  updateprofessionals_servicesCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: professionals_servicesUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: professionals_servicesFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): professionals_servicesUpdateResponse!
+
+  """Updates zero or more records in the `reserved_appointments` collection"""
+  updatereserved_appointmentsCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: reserved_appointmentsUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: reserved_appointmentsFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): reserved_appointmentsUpdateResponse!
+
+  """Updates zero or more records in the `services` collection"""
+  updateservicesCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: servicesUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: servicesFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): servicesUpdateResponse!
+
+  """Updates zero or more records in the `templates` collection"""
+  updatetemplatesCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: templatesUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: templatesFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): templatesUpdateResponse!
+
+  """Updates zero or more records in the `users` collection"""
+  updateusersCollection(
+    """
+    Fields that are set will be updated for all records matching the `filter`
+    """
+    set: usersUpdateInput!
+
+    """Restricts the mutation's impact to records matching the criteria"""
+    filter: usersFilter
+
+    """
+    The maximum number of records in the collection permitted to be affected
+    """
+    atMost: Int! = 1
+  ): usersUpdateResponse!
+}
+
+interface Node {
+  """Retrieves a record by `ID`"""
+  nodeId: ID!
+}
+
+"""Any type not handled by the type system"""
+scalar Opaque
+
+"""
+Boolean expression comparing fields on type "Opaque"
+"""
+input OpaqueFilter {
+  eq: Opaque
+  is: FilterIs
+}
+
+"""Defines a per-field sorting order"""
+enum OrderByDirection {
+  """Ascending order, nulls first"""
+  AscNullsFirst
+
+  """Ascending order, nulls last"""
+  AscNullsLast
+
+  """Descending order, nulls first"""
+  DescNullsFirst
+
+  """Descending order, nulls last"""
+  DescNullsLast
+}
+
+type PageInfo {
+  endCursor: String
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+}
+
+"""The root type for querying data"""
+type Query {
+  """A pagable collection of type `agenda_availability`"""
+  agenda_availabilityCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: agenda_availabilityFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [agenda_availabilityOrderBy!]
+  ): agenda_availabilityConnection
+
+  """A pagable collection of type `agenda_template`"""
+  agenda_templateCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: agenda_templateFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [agenda_templateOrderBy!]
+  ): agenda_templateConnection
+
+  """A pagable collection of type `appointments`"""
+  appointmentsCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: appointmentsFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [appointmentsOrderBy!]
+  ): appointmentsConnection
+
+  """A pagable collection of type `categories`"""
+  categoriesCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: categoriesFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [categoriesOrderBy!]
+  ): categoriesConnection
+
+  """A pagable collection of type `categories_services`"""
+  categories_servicesCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: categories_servicesFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [categories_servicesOrderBy!]
+  ): categories_servicesConnection
+
+  """A pagable collection of type `children`"""
+  childrenCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: childrenFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [childrenOrderBy!]
+  ): childrenConnection
+  equals(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_above(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_below(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_cmp(geom1: Opaque!, geom2: Opaque!): Int
+  geometry_contained_3d(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_contains(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_contains_3d(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_distance_box(geom1: Opaque!, geom2: Opaque!): Float
+  geometry_distance_centroid(geom1: Opaque!, geom2: Opaque!): Float
+  geometry_eq(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_ge(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_gt(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_le(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_left(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_lt(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_overabove(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_overbelow(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_overlaps(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_overlaps_3d(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_overleft(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_overright(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_right(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_same(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_same_3d(geom1: Opaque!, geom2: Opaque!): Boolean
+  geometry_within(geom1: Opaque!, geom2: Opaque!): Boolean
+
+  """A pagable collection of type `needs`"""
+  needsCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: needsFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [needsOrderBy!]
+  ): needsConnection
+
+  """A pagable collection of type `needs_services`"""
+  needs_servicesCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: needs_servicesFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [needs_servicesOrderBy!]
+  ): needs_servicesConnection
+
+  """Retrieve a record by its `ID`"""
+  node(
+    """The record's `ID`"""
+    nodeId: ID!
+  ): Node
+
+  """A pagable collection of type `parents_children`"""
+  parents_childrenCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: parents_childrenFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [parents_childrenOrderBy!]
+  ): parents_childrenConnection
+  postgis_constraint_dims(geomschema: String!, geomtable: String!, geomcolumn: String!): Int
+  postgis_constraint_srid(geomschema: String!, geomtable: String!, geomcolumn: String!): Int
+  postgis_constraint_type(geomschema: String!, geomtable: String!, geomcolumn: String!): String
+  postgis_deprecate(oldname: String!, newname: String!, version: String!): Opaque
+  postgis_full_version: String
+  postgis_geos_version: String
+  postgis_index_extent(tbl: Opaque!, col: String!): Opaque
+  postgis_lib_build_date: String
+  postgis_lib_revision: String
+  postgis_lib_version: String
+  postgis_libjson_version: String
+  postgis_liblwgeom_version: String
+  postgis_libprotobuf_version: String
+  postgis_libxml_version: String
+  postgis_pgsql_version: String
+  postgis_proj_version: String
+  postgis_scripts_build_date: String
+  postgis_scripts_installed: String
+  postgis_scripts_pgsql_version: String
+  postgis_scripts_released: String
+  postgis_svn_version: String
+  postgis_type_name(geomname: String!, coord_dimension: Int!, use_new_name: Boolean = true): String
+  postgis_version: String
+  postgis_wagyu_version: String
+
+  """A pagable collection of type `professional`"""
+  professionalCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: professionalFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [professionalOrderBy!]
+  ): professionalConnection
+
+  """A pagable collection of type `professionals_by_need`"""
+  professionals_by_needCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: professionals_by_needFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [professionals_by_needOrderBy!]
+  ): professionals_by_needConnection
+
+  """A pagable collection of type `professionals_services`"""
+  professionals_servicesCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: professionals_servicesFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [professionals_servicesOrderBy!]
+  ): professionals_servicesConnection
+
+  """A pagable collection of type `reserved_appointments`"""
+  reserved_appointmentsCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: reserved_appointmentsFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [reserved_appointmentsOrderBy!]
+  ): reserved_appointmentsConnection
+  search_professionals(
+    p_service_id: UUID
+    p_need_id: UUID
+    p_category_id: UUID
+    p_lat: Float
+    p_long: Float
+    p_radius: Float
+
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: professionalFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [professionalOrderBy!]
+  ): professionalConnection
+
+  """A pagable collection of type `services`"""
+  servicesCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: servicesFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [servicesOrderBy!]
+  ): servicesConnection
+
+  """A pagable collection of type `spatial_ref_sys`"""
+  spatial_ref_sysCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: spatial_ref_sysFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [spatial_ref_sysOrderBy!]
+  ): spatial_ref_sysConnection
+  st_3dclosestpoint(geom1: Opaque!, geom2: Opaque!): Opaque
+  st_3ddistance(geom1: Opaque!, geom2: Opaque!): Float
+  st_3dintersects(geom1: Opaque!, geom2: Opaque!): Boolean
+  st_3dlongestline(geom1: Opaque!, geom2: Opaque!): Opaque
+  st_3dmakebox(geom1: Opaque!, geom2: Opaque!): Opaque
+  st_3dmaxdistance(geom1: Opaque!, geom2: Opaque!): Float
+  st_3dshortestline(geom1: Opaque!, geom2: Opaque!): Opaque
+  st_asencodedpolyline(geom: Opaque!, nprecision: Int = 5): String
+  st_aslatlontext(geom: Opaque!, tmpl: String = ""): String
+  st_asmarc21(geom: Opaque!, format: String = "hdddmmss"): String
+  st_asmvtgeom(geom: Opaque!, bounds: Opaque!, extent: Int = 4096, buffer: Int = 256, clip_geom: Boolean = true): Opaque
+  st_asx3d(geom: Opaque!, maxdecimaldigits: Int = 15, options: Int = 0): String
+  st_boundingdiagonal(geom: Opaque!, fits: Boolean = false): Opaque
+  st_clipbybox2d(geom: Opaque!, box: Opaque!): Opaque
+  st_closestpoint(geom1: Opaque!, geom2: Opaque!): Opaque
+  st_concavehull(param_geom: Opaque!, param_pctconvex: Float!, param_allow_holes: Boolean = false): Opaque
+  st_contains(geom1: Opaque!, geom2: Opaque!): Boolean
+  st_containsproperly(geom1: Opaque!, geom2: Opaque!): Boolean
+  st_coorddim(geometry: Opaque!): Int
+  st_crosses(geom1: Opaque!, geom2: Opaque!): Boolean
+  st_curvetoline(geom: Opaque!, tol: Float = 32, toltype: Int = 0, flags: Int = 0): Opaque
+  st_delaunaytriangles(g1: Opaque!, tolerance: Float = 0, flags: Int = 0): Opaque
+  st_difference(geom1: Opaque!, geom2: Opaque!, gridsize: Float): Opaque
+  st_disjoint(geom1: Opaque!, geom2: Opaque!): Boolean
+  st_equals(geom1: Opaque!, geom2: Opaque!): Boolean
+  st_force3d(geom: Opaque!, zvalue: Float = 0): Opaque
+  st_force3dm(geom: Opaque!, mvalue: Float = 0): Opaque
+  st_force3dz(geom: Opaque!, zvalue: Float = 0): Opaque
+  st_force4d(geom: Opaque!, zvalue: Float = 0, mvalue: Float = 0): Opaque
+  st_geometricmedian(g: Opaque!, tolerance: Float, max_iter: Int = 10000, fail_if_not_converged: Boolean = false): Opaque
+  st_geomfrommarc21(marc21xml: String!): Opaque
+  st_hasarc(geometry: Opaque!): Boolean
+  st_hexagon(size: Float!, cell_i: Int!, cell_j: Int!, origin: Opaque): Opaque
+  st_interpolatepoint(line: Opaque!, point: Opaque!): Float
+  st_intersects(geom1: Opaque!, geom2: Opaque!): Boolean
+  st_letters(letters: String!, font: JSON): Opaque
+  st_linecrossingdirection(line1: Opaque!, line2: Opaque!): Int
+  st_linefromencodedpolyline(txtin: String!, nprecision: Int = 5): Opaque
+  st_linelocatepoint(geom1: Opaque!, geom2: Opaque!): Float
+  st_linetocurve(geometry: Opaque!): Opaque
+  st_locatealong(geometry: Opaque!, measure: Float!, leftrightoffset: Float = 0): Opaque
+  st_locatebetween(geometry: Opaque!, frommeasure: Float!, tomeasure: Float!, leftrightoffset: Float = 0): Opaque
+  st_locatebetweenelevations(geometry: Opaque!, fromelevation: Float!, toelevation: Float!): Opaque
+  st_longestline(geom1: Opaque!, geom2: Opaque!): Opaque
+  st_makebox2d(geom1: Opaque!, geom2: Opaque!): Opaque
+  st_maxdistance(geom1: Opaque!, geom2: Opaque!): Float
+  st_minimumboundingcircle(inputgeom: Opaque!, segs_per_quarter: Int = 48): Opaque
+  st_node(g: Opaque!): Opaque
+  st_normalize(geom: Opaque!): Opaque
+  st_offsetcurve(line: Opaque!, distance: Float!, params: String = ""): Opaque
+  st_orderingequals(geom1: Opaque!, geom2: Opaque!): Boolean
+  st_overlaps(geom1: Opaque!, geom2: Opaque!): Boolean
+  st_pointm(xcoordinate: Float!, ycoordinate: Float!, mcoordinate: Float!, srid: Int = 0): Opaque
+  st_pointz(xcoordinate: Float!, ycoordinate: Float!, zcoordinate: Float!, srid: Int = 0): Opaque
+  st_pointzm(xcoordinate: Float!, ycoordinate: Float!, zcoordinate: Float!, mcoordinate: Float!, srid: Int = 0): Opaque
+  st_project(geog: Opaque!, distance: Float!, azimuth: Float!): Opaque
+  st_quantizecoordinates(g: Opaque!, prec_x: Int!, prec_y: Int, prec_z: Int, prec_m: Int): Opaque
+  st_reduceprecision(geom: Opaque!, gridsize: Float!): Opaque
+  st_removerepeatedpoints(geom: Opaque!, tolerance: Float = 0): Opaque
+  st_sharedpaths(geom1: Opaque!, geom2: Opaque!): Opaque
+  st_shortestline(geom1: Opaque!, geom2: Opaque!): Opaque
+  st_simplifypolygonhull(geom: Opaque!, vertex_fraction: Float!, is_outer: Boolean = true): Opaque
+  st_sortablehash(geom: Opaque!): BigInt
+  st_split(geom1: Opaque!, geom2: Opaque!): Opaque
+  st_square(size: Float!, cell_i: Int!, cell_j: Int!, origin: Opaque): Opaque
+  st_swapordinates(geom: Opaque!, ords: Opaque!): Opaque
+  st_symdifference(geom1: Opaque!, geom2: Opaque!, gridsize: Float): Opaque
+  st_tileenvelope(zoom: Int!, x: Int!, y: Int!, bounds: Opaque, margin: Float = 0): Opaque
+  st_touches(geom1: Opaque!, geom2: Opaque!): Boolean
+  st_triangulatepolygon(g1: Opaque!): Opaque
+  st_voronoi(g1: Opaque!, clip: Opaque, tolerance: Float = 0, return_polygons: Boolean = true): Opaque
+  st_voronoilines(g1: Opaque!, tolerance: Float = 0, extend_to: Opaque): Opaque
+  st_voronoipolygons(g1: Opaque!, tolerance: Float = 0, extend_to: Opaque): Opaque
+  st_within(geom1: Opaque!, geom2: Opaque!): Boolean
+  st_wkbtosql(wkb: Opaque!): Opaque
+  st_wrapx(geom: Opaque!, wrap: Float!, move: Float!): Opaque
+
+  """A pagable collection of type `templates`"""
+  templatesCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: templatesFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [templatesOrderBy!]
+  ): templatesConnection
+
+  """A pagable collection of type `users`"""
+  usersCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: usersFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [usersOrderBy!]
+  ): usersConnection
+}
+
+"""
+Boolean expression comparing fields on type "String"
+"""
+input StringFilter {
+  eq: String
+  gt: String
+  gte: String
+  ilike: String
+  in: [String!]
+  iregex: String
+  is: FilterIs
+  like: String
+  lt: String
+  lte: String
+  neq: String
+  regex: String
+  startsWith: String
+}
+
+"""
+Boolean expression comparing fields on type "StringList"
+"""
+input StringListFilter {
+  containedBy: [String!]
+  contains: [String!]
+  eq: [String!]
+  is: FilterIs
+  overlaps: [String!]
+}
+
+"""A time without date information"""
+scalar Time
+
+"""
+Boolean expression comparing fields on type "Time"
+"""
+input TimeFilter {
+  eq: Time
+  gt: Time
+  gte: Time
+  in: [Time!]
+  is: FilterIs
+  lt: Time
+  lte: Time
+  neq: Time
+}
+
+"""
+Boolean expression comparing fields on type "TimeList"
+"""
+input TimeListFilter {
+  containedBy: [Time!]
+  contains: [Time!]
+  eq: [Time!]
+  is: FilterIs
+  overlaps: [Time!]
+}
+
+"""A universally unique identifier"""
+scalar UUID
+
+"""
+Boolean expression comparing fields on type "UUID"
+"""
+input UUIDFilter {
+  eq: UUID
+  in: [UUID!]
+  is: FilterIs
+  neq: UUID
+}
+
+"""
+Boolean expression comparing fields on type "UUIDList"
+"""
+input UUIDListFilter {
+  containedBy: [UUID!]
+  contains: [UUID!]
+  eq: [UUID!]
+  is: FilterIs
+  overlaps: [UUID!]
+}
+
+type agenda_availability implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  professional_id: UUID!
+  start_date: Datetime!
+  end_date: Datetime!
+  created_at: Datetime!
+  professional: professional
+}
+
+type agenda_availabilityConnection {
+  edges: [agenda_availabilityEdge!]!
+  pageInfo: PageInfo!
+}
+
+type agenda_availabilityDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [agenda_availability!]!
+}
+
+type agenda_availabilityEdge {
+  cursor: String!
+  node: agenda_availability!
+}
+
+input agenda_availabilityFilter {
+  professional_id: UUIDFilter
+  start_date: DatetimeFilter
+  end_date: DatetimeFilter
+  created_at: DatetimeFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [agenda_availabilityFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [agenda_availabilityFilter!]
+
+  """Negates a filter"""
+  not: agenda_availabilityFilter
+}
+
+input agenda_availabilityInsertInput {
+  professional_id: UUID
+  start_date: Datetime
+  end_date: Datetime
+  created_at: Datetime
+}
+
+type agenda_availabilityInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [agenda_availability!]!
+}
+
+input agenda_availabilityOrderBy {
+  professional_id: OrderByDirection
+  start_date: OrderByDirection
+  end_date: OrderByDirection
+  created_at: OrderByDirection
+}
+
+input agenda_availabilityUpdateInput {
+  professional_id: UUID
+  start_date: Datetime
+  end_date: Datetime
+  created_at: Datetime
+}
+
+type agenda_availabilityUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [agenda_availability!]!
+}
+
+type agenda_template implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  template_id: UUID!
+  day_week: Int!
+  start_time: Time!
+  end_time: Time!
+  templates: templates
+}
+
+type agenda_templateConnection {
+  edges: [agenda_templateEdge!]!
+  pageInfo: PageInfo!
+}
+
+type agenda_templateDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [agenda_template!]!
+}
+
+type agenda_templateEdge {
+  cursor: String!
+  node: agenda_template!
+}
+
+input agenda_templateFilter {
+  template_id: UUIDFilter
+  day_week: IntFilter
+  start_time: TimeFilter
+  end_time: TimeFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [agenda_templateFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [agenda_templateFilter!]
+
+  """Negates a filter"""
+  not: agenda_templateFilter
+}
+
+input agenda_templateInsertInput {
+  template_id: UUID
+  day_week: Int
+  start_time: Time
+  end_time: Time
+}
+
+type agenda_templateInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [agenda_template!]!
+}
+
+input agenda_templateOrderBy {
+  template_id: OrderByDirection
+  day_week: OrderByDirection
+  start_time: OrderByDirection
+  end_time: OrderByDirection
+}
+
+input agenda_templateUpdateInput {
+  template_id: UUID
+  day_week: Int
+  start_time: Time
+  end_time: Time
+}
+
+type agenda_templateUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [agenda_template!]!
+}
+
+enum appointment_status {
+  PENDING
+  CONFIRMED
+  CANCELLED
+}
+
+"""
+Boolean expression comparing fields on type "appointment_status"
+"""
+input appointment_statusFilter {
+  eq: appointment_status
+  in: [appointment_status!]
+  is: FilterIs
+  neq: appointment_status
+}
+
+type appointments implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  id: UUID!
+  created_at: Datetime!
+  professional_id: UUID!
+  user_id: UUID!
+  service_id: UUID!
+  comment: String
+  start_date: Datetime!
+  end_date: Datetime!
+  status: appointment_status!
+  cancel_comment: String
+  price: Int!
+  duration: Int!
+  professional: professional
+  users: users
+  services: services
+}
+
+type appointmentsConnection {
+  edges: [appointmentsEdge!]!
+  pageInfo: PageInfo!
+}
+
+type appointmentsDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [appointments!]!
+}
+
+type appointmentsEdge {
+  cursor: String!
+  node: appointments!
+}
+
+input appointmentsFilter {
+  id: UUIDFilter
+  created_at: DatetimeFilter
+  professional_id: UUIDFilter
+  user_id: UUIDFilter
+  service_id: UUIDFilter
+  comment: StringFilter
+  start_date: DatetimeFilter
+  end_date: DatetimeFilter
+  status: appointment_statusFilter
+  cancel_comment: StringFilter
+  price: IntFilter
+  duration: IntFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [appointmentsFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [appointmentsFilter!]
+
+  """Negates a filter"""
+  not: appointmentsFilter
+}
+
+input appointmentsInsertInput {
+  id: UUID
+  created_at: Datetime
+  professional_id: UUID
+  user_id: UUID
+  service_id: UUID
+  comment: String
+  start_date: Datetime
+  end_date: Datetime
+  status: appointment_status
+  cancel_comment: String
+  price: Int
+  duration: Int
+}
+
+type appointmentsInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [appointments!]!
+}
+
+input appointmentsOrderBy {
+  id: OrderByDirection
+  created_at: OrderByDirection
+  professional_id: OrderByDirection
+  user_id: OrderByDirection
+  service_id: OrderByDirection
+  comment: OrderByDirection
+  start_date: OrderByDirection
+  end_date: OrderByDirection
+  status: OrderByDirection
+  cancel_comment: OrderByDirection
+  price: OrderByDirection
+  duration: OrderByDirection
+}
+
+input appointmentsUpdateInput {
+  id: UUID
+  created_at: Datetime
+  professional_id: UUID
+  user_id: UUID
+  service_id: UUID
+  comment: String
+  start_date: Datetime
+  end_date: Datetime
+  status: appointment_status
+  cancel_comment: String
+  price: Int
+  duration: Int
+}
+
+type appointmentsUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [appointments!]!
+}
+
+type categories implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  id: UUID!
+  name: String!
+  categories_servicesCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: categories_servicesFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [categories_servicesOrderBy!]
+  ): categories_servicesConnection
+}
+
+type categoriesConnection {
+  edges: [categoriesEdge!]!
+  pageInfo: PageInfo!
+}
+
+type categoriesDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [categories!]!
+}
+
+type categoriesEdge {
+  cursor: String!
+  node: categories!
+}
+
+input categoriesFilter {
+  id: UUIDFilter
+  name: StringFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [categoriesFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [categoriesFilter!]
+
+  """Negates a filter"""
+  not: categoriesFilter
+}
+
+input categoriesInsertInput {
+  id: UUID
+  name: String
+}
+
+type categoriesInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [categories!]!
+}
+
+input categoriesOrderBy {
+  id: OrderByDirection
+  name: OrderByDirection
+}
+
+input categoriesUpdateInput {
+  id: UUID
+  name: String
+}
+
+type categoriesUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [categories!]!
+}
+
+type categories_services implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  category_id: UUID!
+  service_id: UUID!
+  services: services
+  categories: categories
+}
+
+type categories_servicesConnection {
+  edges: [categories_servicesEdge!]!
+  pageInfo: PageInfo!
+}
+
+type categories_servicesDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [categories_services!]!
+}
+
+type categories_servicesEdge {
+  cursor: String!
+  node: categories_services!
+}
+
+input categories_servicesFilter {
+  category_id: UUIDFilter
+  service_id: UUIDFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [categories_servicesFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [categories_servicesFilter!]
+
+  """Negates a filter"""
+  not: categories_servicesFilter
+}
+
+input categories_servicesInsertInput {
+  category_id: UUID
+  service_id: UUID
+}
+
+type categories_servicesInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [categories_services!]!
+}
+
+input categories_servicesOrderBy {
+  category_id: OrderByDirection
+  service_id: OrderByDirection
+}
+
+input categories_servicesUpdateInput {
+  category_id: UUID
+  service_id: UUID
+}
+
+type categories_servicesUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [categories_services!]!
+}
+
+type children implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  id: UUID!
+  created_at: Datetime!
+  first_name: String!
+  last_name: String!
+  birth_date: Date!
+  parents_childrenCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: parents_childrenFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [parents_childrenOrderBy!]
+  ): parents_childrenConnection
+}
+
+type childrenConnection {
+  edges: [childrenEdge!]!
+  pageInfo: PageInfo!
+}
+
+type childrenDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [children!]!
+}
+
+type childrenEdge {
+  cursor: String!
+  node: children!
+}
+
+input childrenFilter {
+  id: UUIDFilter
+  created_at: DatetimeFilter
+  first_name: StringFilter
+  last_name: StringFilter
+  birth_date: DateFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [childrenFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [childrenFilter!]
+
+  """Negates a filter"""
+  not: childrenFilter
+}
+
+input childrenInsertInput {
+  id: UUID
+  created_at: Datetime
+  first_name: String
+  last_name: String
+  birth_date: Date
+}
+
+type childrenInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [children!]!
+}
+
+input childrenOrderBy {
+  id: OrderByDirection
+  created_at: OrderByDirection
+  first_name: OrderByDirection
+  last_name: OrderByDirection
+  birth_date: OrderByDirection
+}
+
+input childrenUpdateInput {
+  id: UUID
+  created_at: Datetime
+  first_name: String
+  last_name: String
+  birth_date: Date
+}
+
+type childrenUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [children!]!
+}
+
+enum informations_categories {
+  pregnancy
+  baby_and_parenting
+  postpartum
+}
+
+"""
+Boolean expression comparing fields on type "informations_categories"
+"""
+input informations_categoriesFilter {
+  eq: informations_categories
+  in: [informations_categories!]
+  is: FilterIs
+  neq: informations_categories
+}
+
+type needs implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  id: UUID!
+  name: String!
+  category: informations_categories!
+  needs_servicesCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: needs_servicesFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [needs_servicesOrderBy!]
+  ): needs_servicesConnection
+}
+
+type needsConnection {
+  edges: [needsEdge!]!
+  pageInfo: PageInfo!
+}
+
+type needsDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [needs!]!
+}
+
+type needsEdge {
+  cursor: String!
+  node: needs!
+}
+
+input needsFilter {
+  id: UUIDFilter
+  name: StringFilter
+  category: informations_categoriesFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [needsFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [needsFilter!]
+
+  """Negates a filter"""
+  not: needsFilter
+}
+
+input needsInsertInput {
+  id: UUID
+  name: String
+  category: informations_categories
+}
+
+type needsInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [needs!]!
+}
+
+input needsOrderBy {
+  id: OrderByDirection
+  name: OrderByDirection
+  category: OrderByDirection
+}
+
+input needsUpdateInput {
+  id: UUID
+  name: String
+  category: informations_categories
+}
+
+type needsUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [needs!]!
+}
+
+type needs_services implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  need_id: UUID!
+  service_id: UUID!
+  services: services
+  needs: needs
+}
+
+type needs_servicesConnection {
+  edges: [needs_servicesEdge!]!
+  pageInfo: PageInfo!
+}
+
+type needs_servicesDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [needs_services!]!
+}
+
+type needs_servicesEdge {
+  cursor: String!
+  node: needs_services!
+}
+
+input needs_servicesFilter {
+  need_id: UUIDFilter
+  service_id: UUIDFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [needs_servicesFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [needs_servicesFilter!]
+
+  """Negates a filter"""
+  not: needs_servicesFilter
+}
+
+input needs_servicesInsertInput {
+  need_id: UUID
+  service_id: UUID
+}
+
+type needs_servicesInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [needs_services!]!
+}
+
+input needs_servicesOrderBy {
+  need_id: OrderByDirection
+  service_id: OrderByDirection
+}
+
+input needs_servicesUpdateInput {
+  need_id: UUID
+  service_id: UUID
+}
+
+type needs_servicesUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [needs_services!]!
+}
+
+type parents_children implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  created_at: Datetime!
+  parent: UUID!
+  child: UUID!
+  users: users
+  children: children
+}
+
+type parents_childrenConnection {
+  edges: [parents_childrenEdge!]!
+  pageInfo: PageInfo!
+}
+
+type parents_childrenDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [parents_children!]!
+}
+
+type parents_childrenEdge {
+  cursor: String!
+  node: parents_children!
+}
+
+input parents_childrenFilter {
+  created_at: DatetimeFilter
+  parent: UUIDFilter
+  child: UUIDFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [parents_childrenFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [parents_childrenFilter!]
+
+  """Negates a filter"""
+  not: parents_childrenFilter
+}
+
+input parents_childrenInsertInput {
+  created_at: Datetime
+  parent: UUID
+  child: UUID
+}
+
+type parents_childrenInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [parents_children!]!
+}
+
+input parents_childrenOrderBy {
+  created_at: OrderByDirection
+  parent: OrderByDirection
+  child: OrderByDirection
+}
+
+input parents_childrenUpdateInput {
+  created_at: Datetime
+  parent: UUID
+  child: UUID
+}
+
+type parents_childrenUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [parents_children!]!
+}
+
+type professional implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  id: UUID!
+  created_at: Datetime!
+  siret: String!
+  first_name: String
+  last_name: String
+  description: String
+  health_number: String
+  home_visit: Boolean!
+  home_visit_range: Int
+  address: String
+  city: String
+  postcode: String
+  coordinates: Opaque!
+  latitude: Float
+  longitude: Float
+  templatesCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: templatesFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [templatesOrderBy!]
+  ): templatesConnection
+  agenda_availabilityCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: agenda_availabilityFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [agenda_availabilityOrderBy!]
+  ): agenda_availabilityConnection
+  professionals_servicesCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: professionals_servicesFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [professionals_servicesOrderBy!]
+  ): professionals_servicesConnection
+  appointmentsCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: appointmentsFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [appointmentsOrderBy!]
+  ): appointmentsConnection
+  professionals_by_needCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: professionals_by_needFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [professionals_by_needOrderBy!]
+  ): professionals_by_needConnection
+  reserved_appointmentsCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: reserved_appointmentsFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [reserved_appointmentsOrderBy!]
+  ): reserved_appointmentsConnection
+}
+
+type professionalConnection {
+  edges: [professionalEdge!]!
+  pageInfo: PageInfo!
+}
+
+type professionalDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [professional!]!
+}
+
+type professionalEdge {
+  cursor: String!
+  node: professional!
+}
+
+input professionalFilter {
+  id: UUIDFilter
+  created_at: DatetimeFilter
+  siret: StringFilter
+  first_name: StringFilter
+  last_name: StringFilter
+  description: StringFilter
+  health_number: StringFilter
+  home_visit: BooleanFilter
+  home_visit_range: IntFilter
+  address: StringFilter
+  city: StringFilter
+  postcode: StringFilter
+  coordinates: OpaqueFilter
+  latitude: FloatFilter
+  longitude: FloatFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [professionalFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [professionalFilter!]
+
+  """Negates a filter"""
+  not: professionalFilter
+}
+
+input professionalInsertInput {
+  id: UUID
+  created_at: Datetime
+  siret: String
+  first_name: String
+  last_name: String
+  description: String
+  health_number: String
+  home_visit: Boolean
+  home_visit_range: Int
+  address: String
+  city: String
+  postcode: String
+  coordinates: Opaque
+}
+
+type professionalInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [professional!]!
+}
+
+input professionalOrderBy {
+  id: OrderByDirection
+  created_at: OrderByDirection
+  siret: OrderByDirection
+  first_name: OrderByDirection
+  last_name: OrderByDirection
+  description: OrderByDirection
+  health_number: OrderByDirection
+  home_visit: OrderByDirection
+  home_visit_range: OrderByDirection
+  address: OrderByDirection
+  city: OrderByDirection
+  postcode: OrderByDirection
+  coordinates: OrderByDirection
+  latitude: OrderByDirection
+  longitude: OrderByDirection
+}
+
+input professionalUpdateInput {
+  id: UUID
+  created_at: Datetime
+  siret: String
+  first_name: String
+  last_name: String
+  description: String
+  health_number: String
+  home_visit: Boolean
+  home_visit_range: Int
+  address: String
+  city: String
+  postcode: String
+  coordinates: Opaque
+}
+
+type professionalUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [professional!]!
+}
+
+type professionals_by_need implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  id: UUID
+  need_id: UUID
+  professional: professional
+}
+
+type professionals_by_needConnection {
+  edges: [professionals_by_needEdge!]!
+  pageInfo: PageInfo!
+}
+
+type professionals_by_needDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [professionals_by_need!]!
+}
+
+type professionals_by_needEdge {
+  cursor: String!
+  node: professionals_by_need!
+}
+
+input professionals_by_needFilter {
+  id: UUIDFilter
+  need_id: UUIDFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [professionals_by_needFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [professionals_by_needFilter!]
+
+  """Negates a filter"""
+  not: professionals_by_needFilter
+}
+
+input professionals_by_needInsertInput {
+  id: UUID
+  need_id: UUID
+}
+
+type professionals_by_needInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [professionals_by_need!]!
+}
+
+input professionals_by_needOrderBy {
+  id: OrderByDirection
+  need_id: OrderByDirection
+}
+
+input professionals_by_needUpdateInput {
+  id: UUID
+  need_id: UUID
+}
+
+type professionals_by_needUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [professionals_by_need!]!
+}
+
+type professionals_services implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  professional_id: UUID!
+  service_id: UUID!
+  duration: Int!
+  price: Int!
+  disabled: Boolean!
+  professional: professional
+  services: services
+}
+
+type professionals_servicesConnection {
+  edges: [professionals_servicesEdge!]!
+  pageInfo: PageInfo!
+}
+
+type professionals_servicesDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [professionals_services!]!
+}
+
+type professionals_servicesEdge {
+  cursor: String!
+  node: professionals_services!
+}
+
+input professionals_servicesFilter {
+  professional_id: UUIDFilter
+  service_id: UUIDFilter
+  duration: IntFilter
+  price: IntFilter
+  disabled: BooleanFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [professionals_servicesFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [professionals_servicesFilter!]
+
+  """Negates a filter"""
+  not: professionals_servicesFilter
+}
+
+input professionals_servicesInsertInput {
+  professional_id: UUID
+  service_id: UUID
+  duration: Int
+  price: Int
+  disabled: Boolean
+}
+
+type professionals_servicesInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [professionals_services!]!
+}
+
+input professionals_servicesOrderBy {
+  professional_id: OrderByDirection
+  service_id: OrderByDirection
+  duration: OrderByDirection
+  price: OrderByDirection
+  disabled: OrderByDirection
+}
+
+input professionals_servicesUpdateInput {
+  professional_id: UUID
+  service_id: UUID
+  duration: Int
+  price: Int
+  disabled: Boolean
+}
+
+type professionals_servicesUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [professionals_services!]!
+}
+
+type reserved_appointments implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  professional_id: UUID
+  start_date: Datetime
+  end_date: Datetime
+  status: appointment_status
+  professional: professional
+}
+
+type reserved_appointmentsConnection {
+  edges: [reserved_appointmentsEdge!]!
+  pageInfo: PageInfo!
+}
+
+type reserved_appointmentsDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [reserved_appointments!]!
+}
+
+type reserved_appointmentsEdge {
+  cursor: String!
+  node: reserved_appointments!
+}
+
+input reserved_appointmentsFilter {
+  professional_id: UUIDFilter
+  start_date: DatetimeFilter
+  end_date: DatetimeFilter
+  status: appointment_statusFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [reserved_appointmentsFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [reserved_appointmentsFilter!]
+
+  """Negates a filter"""
+  not: reserved_appointmentsFilter
+}
+
+input reserved_appointmentsInsertInput {
+  professional_id: UUID
+  start_date: Datetime
+  end_date: Datetime
+  status: appointment_status
+}
+
+type reserved_appointmentsInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [reserved_appointments!]!
+}
+
+input reserved_appointmentsOrderBy {
+  professional_id: OrderByDirection
+  start_date: OrderByDirection
+  end_date: OrderByDirection
+  status: OrderByDirection
+}
+
+input reserved_appointmentsUpdateInput {
+  professional_id: UUID
+  start_date: Datetime
+  end_date: Datetime
+  status: appointment_status
+}
+
+type reserved_appointmentsUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [reserved_appointments!]!
+}
+
+type services implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  id: UUID!
+  name: String!
+  description: String!
+  categories_servicesCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: categories_servicesFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [categories_servicesOrderBy!]
+  ): categories_servicesConnection
+  professionals_servicesCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: professionals_servicesFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [professionals_servicesOrderBy!]
+  ): professionals_servicesConnection
+  appointmentsCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: appointmentsFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [appointmentsOrderBy!]
+  ): appointmentsConnection
+  needs_servicesCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: needs_servicesFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [needs_servicesOrderBy!]
+  ): needs_servicesConnection
+}
+
+type servicesConnection {
+  edges: [servicesEdge!]!
+  pageInfo: PageInfo!
+}
+
+type servicesDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [services!]!
+}
+
+type servicesEdge {
+  cursor: String!
+  node: services!
+}
+
+input servicesFilter {
+  id: UUIDFilter
+  name: StringFilter
+  description: StringFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [servicesFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [servicesFilter!]
+
+  """Negates a filter"""
+  not: servicesFilter
+}
+
+input servicesInsertInput {
+  id: UUID
+  name: String
+  description: String
+}
+
+type servicesInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [services!]!
+}
+
+input servicesOrderBy {
+  id: OrderByDirection
+  name: OrderByDirection
+  description: OrderByDirection
+}
+
+input servicesUpdateInput {
+  id: UUID
+  name: String
+  description: String
+}
+
+type servicesUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [services!]!
+}
+
+type spatial_ref_sys implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  srid: Int!
+  auth_name: String
+  auth_srid: Int
+  srtext: String
+  proj4text: String
+}
+
+type spatial_ref_sysConnection {
+  edges: [spatial_ref_sysEdge!]!
+  pageInfo: PageInfo!
+}
+
+type spatial_ref_sysEdge {
+  cursor: String!
+  node: spatial_ref_sys!
+}
+
+input spatial_ref_sysFilter {
+  srid: IntFilter
+  auth_name: StringFilter
+  auth_srid: IntFilter
+  srtext: StringFilter
+  proj4text: StringFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [spatial_ref_sysFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [spatial_ref_sysFilter!]
+
+  """Negates a filter"""
+  not: spatial_ref_sysFilter
+}
+
+input spatial_ref_sysOrderBy {
+  srid: OrderByDirection
+  auth_name: OrderByDirection
+  auth_srid: OrderByDirection
+  srtext: OrderByDirection
+  proj4text: OrderByDirection
+}
+
+type templates implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  id: UUID!
+  name: String!
+  professional_id: UUID!
+  professional: professional
+  agenda_templateCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: agenda_templateFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [agenda_templateOrderBy!]
+  ): agenda_templateConnection
+}
+
+type templatesConnection {
+  edges: [templatesEdge!]!
+  pageInfo: PageInfo!
+}
+
+type templatesDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [templates!]!
+}
+
+type templatesEdge {
+  cursor: String!
+  node: templates!
+}
+
+input templatesFilter {
+  id: UUIDFilter
+  name: StringFilter
+  professional_id: UUIDFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [templatesFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [templatesFilter!]
+
+  """Negates a filter"""
+  not: templatesFilter
+}
+
+input templatesInsertInput {
+  id: UUID
+  name: String
+  professional_id: UUID
+}
+
+type templatesInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [templates!]!
+}
+
+input templatesOrderBy {
+  id: OrderByDirection
+  name: OrderByDirection
+  professional_id: OrderByDirection
+}
+
+input templatesUpdateInput {
+  id: UUID
+  name: String
+  professional_id: UUID
+}
+
+type templatesUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [templates!]!
+}
+
+type users implements Node {
+  """Globally Unique Record Identifier"""
+  nodeId: ID!
+  id: UUID!
+  created_at: Datetime!
+  first_name: String!
+  last_name: String!
+  birth_date: Date!
+  picture: String
+  parents_childrenCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: parents_childrenFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [parents_childrenOrderBy!]
+  ): parents_childrenConnection
+  appointmentsCollection(
+    """Query the first `n` records in the collection"""
+    first: Int
+
+    """Query the last `n` records in the collection"""
+    last: Int
+
+    """Query values in the collection before the provided cursor"""
+    before: Cursor
+
+    """Query values in the collection after the provided cursor"""
+    after: Cursor
+
+    """
+    Skip n values from the after cursor. Alternative to cursor pagination. Backward pagination not supported.
+    """
+    offset: Int
+
+    """Filters to apply to the results set when querying from the collection"""
+    filter: appointmentsFilter
+
+    """Sort order to apply to the collection"""
+    orderBy: [appointmentsOrderBy!]
+  ): appointmentsConnection
+}
+
+type usersConnection {
+  edges: [usersEdge!]!
+  pageInfo: PageInfo!
+}
+
+type usersDeleteResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [users!]!
+}
+
+type usersEdge {
+  cursor: String!
+  node: users!
+}
+
+input usersFilter {
+  id: UUIDFilter
+  created_at: DatetimeFilter
+  first_name: StringFilter
+  last_name: StringFilter
+  birth_date: DateFilter
+  picture: StringFilter
+  nodeId: IDFilter
+
+  """
+  Returns true only if all its inner filters are true, otherwise returns false
+  """
+  and: [usersFilter!]
+
+  """
+  Returns true if at least one of its inner filters is true, otherwise returns false
+  """
+  or: [usersFilter!]
+
+  """Negates a filter"""
+  not: usersFilter
+}
+
+input usersInsertInput {
+  id: UUID
+  created_at: Datetime
+  first_name: String
+  last_name: String
+  birth_date: Date
+  picture: String
+}
+
+type usersInsertResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [users!]!
+}
+
+input usersOrderBy {
+  id: OrderByDirection
+  created_at: OrderByDirection
+  first_name: OrderByDirection
+  last_name: OrderByDirection
+  birth_date: OrderByDirection
+  picture: OrderByDirection
+}
+
+input usersUpdateInput {
+  id: UUID
+  created_at: Datetime
+  first_name: String
+  last_name: String
+  birth_date: Date
+  picture: String
+}
+
+type usersUpdateResponse {
+  """Count of the records impacted by the mutation"""
+  affectedCount: Int!
+
+  """Array of records impacted by the mutation"""
+  records: [users!]!
+}

@@ -20,6 +20,18 @@ Implement client features :
 - Supabase
 - Intl
 
+## Config
+
+### GraphQL
+
+I use graphql and graphql-codegen libs to implement graphql queries.
+Queries are written inside .graphql files (inside `./lib/core/data/datasources/graphql/...`)
+
+1. Retrieve schema (using Apollo sandbox https://studio.apollographql.com/sandbox/schema/sdl) and import the resulting schema.graphql in `./lib/core/data/datasources/graphql/schema/`
+2. Configure ./build.yaml file with graphql options (custom scalars definitions & graphql client)
+3. Generate files using graphql-codegen command : `dart run build_runner build`
+4. Use queries like : `graphqlClient.query$MyQuery()`
+
 ## TODO
 
 - [x] Create Theme
@@ -27,7 +39,7 @@ Implement client features :
 - [x] Init i18n
 - [ ] Setup DI
 - [ ] Implement auth feature (page, bloc, usecase, repository, data source)
-- [ ] Init graphql client and queries
+- [x] Init graphql client and queries
 - [ ] Implement search feature
 - [ ] App config (variants)
 - [ ] Write tests

@@ -1,0 +1,64 @@
+fragment Professional on professional {
+    id
+    first_name
+    last_name
+    description
+    siret
+    health_number
+    home_visit
+    home_visit_range
+    address
+    city
+    postcode
+    latitude
+    longitude
+}
+
+fragment ProfessionalWithServices on professional {
+    id
+    first_name
+    last_name
+    description
+    siret
+    health_number
+    home_visit
+    home_visit_range
+    address
+    city
+    postcode
+    latitude
+    longitude
+
+    professionals_servicesCollection(filter: {disabled: {eq: false}}){
+        edges {
+            node {
+                duration
+                price
+                services {
+                    id
+                    name
+                    categories_servicesCollection {
+                        edges {
+                            node {
+                                categories {
+                                    id
+                                    name
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+fragment ProfessionalServices on professionals_services {
+    services {
+        id
+        name
+    }
+    duration
+    price
+    disabled
+}
