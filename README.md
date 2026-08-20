@@ -32,15 +32,20 @@ Queries are written inside .graphql files (inside `./lib/core/data/datasources/g
 3. Generate files using graphql-codegen command : `dart run build_runner build`
 4. Use queries like : `graphqlClient.query$MyQuery()`
 
+### DI
+
+To use dependencies injection, add annotation (from injectable library) on class or use module annotation.
+Once done, generate code by using `dart run build_runner build` (or `dart run build_runner watch` to keep listening to changes)
+
 ## TODO
 
 - [x] Create Theme
 - [x] Init router
 - [x] Init i18n
-- [ ] Setup DI
-- [ ] Implement auth feature (page, bloc, usecase, repository, data source)
+- [x] Setup DI
 - [x] Init graphql client and queries
-- [ ] Implement search feature
+- [ ] Implement auth feature (from supabase)
+- [ ] Implement search feature (from graphql)
 - [ ] App config (variants)
 - [ ] Write tests
 
