@@ -53,6 +53,12 @@ Once done, generate code by using `dart run build_runner build` (or `dart run bu
 - [x] Init env variables
 - [ ] Implement auth feature (from supabase)
 - [ ] Implement search feature (from graphql)
+  - [x] graphql query
+  - [x] datasource
+  - [x] models
+  - [x] repository
+  - [x] entity
+  - [ ] presentation
 - [ ] App config (variants)
 - [ ] Write tests
 

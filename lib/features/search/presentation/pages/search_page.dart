@@ -20,14 +20,26 @@ class SearchPage extends StatelessWidget {
             builder: (BuildContext ctx, state) {
               return Column(
                 children: [
-                  ElevatedButton(
-                    onPressed: () => ctx.read<SearchCubit>().onSearch(
-                      serviceId,
-                      needId,
-                      categoryId,
+                  if (state is SearchLoaded)
+                    Expanded(
+                      child: ListView.builder(
+                        itemCount: state.professionals.length,
+                        itemBuilder: (_, index) {
+                          return Text(state.professionals[index].fullName);
+                        },
+                      ),
+                    )
+                  else if (state is SearchLoading)
+                    CircularProgressIndicator()
+                  else
+                    ElevatedButton(
+                      onPressed: () => ctx.read<SearchCubit>().onSearch(
+                        serviceId,
+                        needId,
+                        categoryId,
+                      ),
+                      child: Text('search'),
                     ),
-                    child: Text('search'),
-                  ),
                 ],
               );
             },

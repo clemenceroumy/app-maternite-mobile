@@ -11,10 +11,10 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:app_maternite_mobile/core/di/graphql/graphql_module.dart'
     as _i633;
+import 'package:app_maternite_mobile/features/search/data/datasources/search_datasource.dart'
+    as _i843;
 import 'package:app_maternite_mobile/features/search/data/repositories/search_repository_impl.dart'
     as _i54;
-import 'package:app_maternite_mobile/features/search/datasources/search_datasource.dart'
-    as _i779;
 import 'package:app_maternite_mobile/features/search/domain/repositories/search_repository.dart'
     as _i648;
 import 'package:app_maternite_mobile/features/search/domain/usecases/search_usecase.dart'
@@ -34,12 +34,12 @@ extension GetItInjectableX on _i174.GetIt {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     final graphqlModule = _$GraphqlModule();
     gh.lazySingleton<_i763.GraphQLClient>(() => graphqlModule.client);
-    gh.lazySingleton<_i779.SearchDatasource>(
-      () => _i779.SearchDatasource(graphqlClient: gh<_i763.GraphQLClient>()),
+    gh.lazySingleton<_i843.SearchDatasource>(
+      () => _i843.SearchDatasource(graphqlClient: gh<_i763.GraphQLClient>()),
     );
     gh.lazySingleton<_i648.SearchRepository>(
       () => _i54.SearchRepositoryImpl(
-        searchDatasource: gh<_i779.SearchDatasource>(),
+        searchDatasource: gh<_i843.SearchDatasource>(),
       ),
     );
     gh.factory<_i1043.SearchUseCase>(
