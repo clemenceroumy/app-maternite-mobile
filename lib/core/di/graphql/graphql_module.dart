@@ -5,10 +5,13 @@ import 'package:injectable/injectable.dart';
 abstract class GraphqlModule {
   @lazySingleton
   GraphQLClient get client {
+    const url = String.fromEnvironment('SUPABASE_URL');
+    const apiKey = String.fromEnvironment('SUPABASE_PUBLISHABLE_DEFAULT_KEY');
+
     final httpLink = HttpLink(
-      'https://mnsdgmctnolfdbewlvxh.supabase.co/graphql/v1',
+      url,
       defaultHeaders: {
-        'apiKey': 'sb_publishable_gze0fKTUuPYfv3rIT5k8xg_2UlwQlSb',
+        'apiKey': apiKey,
       },
     );
 

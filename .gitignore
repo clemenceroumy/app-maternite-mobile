@@ -13,6 +13,10 @@
 # FVM Version Cache
 .fvm/
 
+# ENV
+lib/core/config/*
+!lib/core/config/env_example.json
+
 # Flutter repo-specific
 /bin/cache/
 /bin/internal/bootstrap.bat

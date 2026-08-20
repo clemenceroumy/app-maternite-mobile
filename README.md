@@ -22,6 +22,12 @@ Implement client features :
 
 ## Config
 
+### Run config
+
+1. Create env files based on `lib/core/config/env_example.json`
+2. For each run config, add the following argument on run to apply config : `--dart-define-from-file=lib/core/config/env_***.json`
+3. Retrieve generated env using `String.fromEnvironment('MY_KEY')` in Dart files. (WARNING: retrieve env using `const` keyword, otherwise nothing is returned)
+
 ### GraphQL
 
 I use graphql and graphql-codegen libs to implement graphql queries.
@@ -44,6 +50,7 @@ Once done, generate code by using `dart run build_runner build` (or `dart run bu
 - [x] Init i18n
 - [x] Setup DI
 - [x] Init graphql client and queries
+- [x] Init env variables
 - [ ] Implement auth feature (from supabase)
 - [ ] Implement search feature (from graphql)
 - [ ] App config (variants)
