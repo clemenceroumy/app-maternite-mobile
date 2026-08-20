@@ -1,5 +1,6 @@
 import 'package:app_maternite_mobile/features/search/domain/usecases/search_usecase.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:injectable/injectable.dart';
 
 sealed class SearchState {}
 
@@ -9,10 +10,11 @@ class SearchLoading extends SearchState {}
 
 class SearchLoaded extends SearchState {}
 
+@injectable
 class SearchCubit extends Cubit<SearchState> {
-  SearchCubit() : super(SearchInitial());
+  SearchCubit({required this._useCase}) : super(SearchInitial());
 
-  final SearchUseCase _useCase = SearchUseCase(); // TODO: inject
+  final SearchUseCase _useCase;
 
   Future<void> onSearch(String serviceId, String needId, String categoryId) async {
     emit(SearchLoading());

@@ -1,3 +1,4 @@
+import 'package:app_maternite_mobile/core/di/injection.dart';
 import 'package:app_maternite_mobile/features/search/presentation/cubits/search_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -14,7 +15,7 @@ class SearchPage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: BlocProvider(
-          create: (_) => SearchCubit(),
+          create: (_) => getIt<SearchCubit>(),
           child: BlocBuilder<SearchCubit, SearchState>(
             builder: (BuildContext ctx, state) {
               return Column(

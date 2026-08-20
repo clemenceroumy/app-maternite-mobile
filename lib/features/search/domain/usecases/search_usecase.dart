@@ -4,6 +4,7 @@ import 'package:app_maternite_mobile/core/domain/usecases/usecase_interface.dart
 import 'package:app_maternite_mobile/features/search/data/repositories/search_repository_impl.dart';
 import 'package:app_maternite_mobile/features/search/domain/repositories/search_repository.dart';
 import 'package:equatable/equatable.dart';
+import 'package:injectable/injectable.dart';
 
 class SearchParams extends Equatable {
   const SearchParams({required this.serviceId, required this.needId, required this.categoryId});
@@ -16,8 +17,11 @@ class SearchParams extends Equatable {
   List<Object?> get props => [serviceId, needId, categoryId];
 }
 
+@injectable
 class SearchUseCase extends UseCase<SearchParams, UseCaseResult<void>> {
-  final SearchRepository _repository = SearchRepositoryImpl(); // TODO: inject
+  final SearchRepository _repository;
+
+  SearchUseCase({required this._repository});
 
   @override
   FutureOr<UseCaseResult<void>> execute(SearchParams param) => guard(() async {
